@@ -6,7 +6,7 @@ import pandas as pd
 url = "https://apisidra.ibge.gov.br/values/t/1757/p/2007-2022/n1/1/n3/all/v/allxp"
 
 # Verificar se o diretório de destino existe, caso contrário, criar
-output_dir = 'data_sidra'
+output_dir = 'data'
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
