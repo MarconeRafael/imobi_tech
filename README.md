@@ -52,8 +52,8 @@ pip install -r requirements.txt
 ├── data/                   # Diretório para armazenar os dados baixados
 ├── notebooks/              # Notebooks de validação e análise
 ├── src/                    # Código-fonte principal
-│   ├── sidra_api.py        # Script para obter dados da API do SIDRA
-│   ├── population_data.py  # Script para manipulação de dados populacionais
+│   ├── puxar_sidra.py        # Script para obter dados da API do SIDRA
+│   ├── populacao_dados.py  # Script para manipulação de dados populacionais
 │   ├── analysis.py         # Scripts de análise e visualização
 │   ├── clustering.py       # Script de agrupamento das séries temporais
 ├── results/                # Resultados (gráficos, tabelas, etc.)
