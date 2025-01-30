@@ -50,13 +50,16 @@ pip install -r requirements.txt
 ```plaintext
 .
 ├── data/                   # Diretório para armazenar os dados baixados
-├── notebooks/              # Notebooks de validação e análise
+├── notebooks/                # Notebooks de validação e análise
+|   ├──   case.ipynb           #opção para execução online        
 ├── src/                    # Código-fonte principal
 │   ├── puxar_sidra.py        # Script para obter dados da API do SIDRA
 │   ├── populacao_dados.py  # Script para manipulação de dados populacionais
-│   ├── analysis.py         # Scripts de análise e visualização
-│   ├── clustering.py       # Script de agrupamento das séries temporais
-├── results/                # Resultados (gráficos, tabelas, etc.)
+│   ├── analize.py         # Encontra as razões requisitadas
+│   ├── tratamento.py       #Limpa e Trata os dados
+│   ├── graficos.py           # Gera e salva graficos
+│   ├── main.py            # arquivo que gerencia o fluxo de todo o projeto
+├── resultados/                # Resultados (gráficos, tabelas, etc.)
 ├── README.md               # Documentação do projeto
 ├── requirements.txt        # Lista de dependências do projeto
 └── .gitignore              # Arquivos e pastas ignorados pelo Git
