@@ -1,0 +1,9 @@
+Cluster 0:
+Acre, Alagoas, Amapá, Amazonas, Ceará, Distrito Federal, Espírito Santo, Goiás, Maranhão, Mato Grosso, Mato Grosso do Sul, Paraíba, Pará, Pernambuco, Piauí, Rio Grande do Norte, Rondônia, Roraima, Santa Catarina, Sergipe, Tocantins
+
+Cluster 2:
+Bahia, Minas Gerais, Paraná, Rio Grande do Sul, Rio de Janeiro
+
+Cluster 3:
+São Paulo
+

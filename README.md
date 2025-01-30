@@ -49,20 +49,20 @@ pip install -r requirements.txt
 
 ```plaintext
 .
-├── data/                   # Diretório para armazenar os dados baixados
+├── data/                     # Diretório para armazenar os dados baixados
 ├── notebooks/                # Notebooks de validação e análise
-|   ├──   case.ipynb           #opção para execução online        
-├── src/                    # Código-fonte principal
+|   ├──   case.ipynb          #opção para execução online        
+├── src/                      # Código-fonte principal
 │   ├── puxar_sidra.py        # Script para obter dados da API do SIDRA
-│   ├── populacao_dados.py  # Script para manipulação de dados populacionais
-│   ├── analize.py         # Encontra as razões requisitadas
-│   ├── tratamento.py       #Limpa e Trata os dados
+│   ├── populacao_dados.py    # Script para manipulação de dados populacionais
+│   ├── analize.py            # Encontra as razões requisitadas
+│   ├── tratamento.py         #Limpa e Trata os dados
 │   ├── graficos.py           # Gera e salva graficos
-│   ├── main.py            # arquivo que gerencia o fluxo de todo o projeto
-├── resultados/                # Resultados (gráficos, tabelas, etc.)
-├── README.md               # Documentação do projeto
-├── requirements.txt        # Lista de dependências do projeto
-└── .gitignore              # Arquivos e pastas ignorados pelo Git
+│   ├── main.py               # arquivo que gerencia o fluxo de todo o projeto
+├── resultados/               # Resultados (gráficos, tabelas, etc.)
+├── README.md                 # Documentação do projeto
+├── requirements.txt          # Lista de dependências do projeto
+└── .gitignore                # Arquivos e pastas ignorados pelo Git
 ```
 
 ---
@@ -75,10 +75,12 @@ pip install -r requirements.txt
    cd <nome-do-repositorio>
    ```
 
-2. **Baixe os dados populacionais:**
-   - Faça o download da tabela "População por sexo e idade simples" no formato `xlsx` ou `ods` e salve no diretório `data/`.
+# Temos 2 opção de execução:
 
-3. **Execute o código:**
+2. **Execute o arquivo case.ipynb:**
+   - Todo projeto está nesse notbook e pode ser executado no google colab ou no jupyter notebook
+
+3. **Execute no formato MVC:**
    - Extraia os dados das empresas via API:
      ```bash
      python src/sidra_api.py
@@ -99,7 +101,12 @@ pip install -r requirements.txt
 4. **Visualize os resultados:**
    - Os gráficos e análises finais serão salvos no diretório `results/`.
 
----
+-clusters_dispersao.png
+-heatmap_saturacao.png
+-tendencias_temporais.png
+-clusters_estados.txt
+ relatorio.pdf
+
 
 ## Metodologia
 
