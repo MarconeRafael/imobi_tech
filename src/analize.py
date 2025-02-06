@@ -88,7 +88,7 @@ def identificar_oportunidades_e_saturacao(df):
     
     return estados_saturados, estados_oportunidades
 
-def salvar_dados(df, caminho_pasta="data", nome_arquivo="dados_processados.csv"):
+def salvar_dados(df, caminho_pasta="data", nome_arquivo="merged_data.csv"):
     """
     Salva os dados processados em um arquivo CSV dentro da pasta especificada.
     """

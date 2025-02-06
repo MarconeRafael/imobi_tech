@@ -33,10 +33,6 @@ def drop_columns(df, columns):
     """Remove colunas específicas do DataFrame."""
     return df.drop(columns=columns)
 
-def aggregate_numeric_columns(df, group_by_columns, numeric_columns):
-    """Agrupa o DataFrame removendo duplicatas e mantendo a média dos valores numéricos."""
-    return df.groupby(group_by_columns, as_index=False)[numeric_columns].mean()
-
 def main():
     # Definição dos caminhos dos arquivos CSV
     file_paths = ["data/dados_2007_2020.csv", "data/dados_2021_2022.csv"]
@@ -64,15 +60,14 @@ def main():
     
     # Selecionar apenas colunas numéricas para agregação
     numeric_columns = ["Ano", "População", "Número de empresas ativas", "Razão População/Empresas"]
-    merged_df = aggregate_numeric_columns(df_combined, ["Ano", "LOCAL"], numeric_columns)
     
     # Remover a coluna "SIGLA" antes da agregação
-    if "SIGLA" in merged_df.columns:
-        merged_df = drop_columns(merged_df, ["SIGLA"])
+    if "SIGLA" in df_combined.columns:
+        df_combined = drop_columns(df_combined, ["SIGLA"])
     
     # Salvar os dados processados
-    save_dataframe(merged_df, "data/dados_agrupados.csv")
-    print(merged_df.dtypes)
+    save_dataframe(df_combined, "data/dados_agrupados.csv")
+    print(df_combined.dtypes)
 
 if __name__ == "__main__":
     main()

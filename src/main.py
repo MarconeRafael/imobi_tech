@@ -2,7 +2,7 @@ from puxar_sidra import processar_dados_sidra
 from populacao_dados import baixar_arquivo_ibge, salvar_csv, filtrar_csv
 from tratamento import (
     load_csv_files, get_unique_values, print_unique_values, filter_dataframe, 
-    save_dataframe, rename_column, drop_columns, aggregate_numeric_columns
+    save_dataframe, rename_column, drop_columns
 )
 from analize import (
     carregar_dados_populacao, carregar_dados_empresas, combinar_dados, 
@@ -58,17 +58,13 @@ def tratar_dados():
     unique_values_populacao = get_unique_values(df_populacao)
     print_unique_values(unique_values_populacao)
 
-    # Agregar colunas numéricas
-    numeric_columns = ["Ano", "População", "Número de empresas ativas", "Razão População/Empresas"]
-    merged_df = aggregate_numeric_columns(df_combined, ["Ano", "LOCAL"], numeric_columns)
-
     # Remover coluna "SIGLA" se existir
-    if "SIGLA" in merged_df.columns:
-        merged_df = drop_columns(merged_df, ["SIGLA"])
+    if "SIGLA" in df_combined.columns:
+        df_combined = drop_columns(df_combined, ["SIGLA"])
 
     # Salvar dados tratados
-    save_dataframe(merged_df, "data/dados_agrupados.csv")
-    print(merged_df.dtypes)
+    save_dataframe(df_combined, "data/dados_agrupados.csv")
+    print(df_combined.dtypes)
 
 def analisar_dados():
     """Realiza a análise dos dados e aplica clusterização."""
